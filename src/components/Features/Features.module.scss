@@ -1,0 +1,243 @@
+@use '../../styles/variables' as *;
+
+.features {
+  @include section-padding;
+  position: relative;
+  background: $color-bg;
+}
+
+.container {
+  @include container;
+}
+
+.sectionLabel {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: $color-primary-muted;
+  border: 1px solid rgba($color-primary, 0.15);
+  border-radius: $radius-full;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-teal-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: $spacing-md;
+}
+
+.highlight {
+  font-family: $font-display;
+  font-style: italic;
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+}
+
+/* ---- Problem ---- */
+.problemSection {
+  margin-bottom: $spacing-4xl;
+}
+
+.problemHeader {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.problemHeading {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.02em;
+  color: $color-text;
+}
+
+.problemSubtitle {
+  color: $color-text-secondary;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+  margin-bottom: $spacing-2xl;
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problemCard {
+  @include glass-card;
+  border-radius: $radius-xl;
+  padding: $spacing-lg;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-4px);
+  }
+}
+
+.problemIcon {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-bottom: $spacing-sm;
+}
+
+.problemTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  color: $color-text;
+}
+
+.problemDesc {
+  color: $color-text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.gapStat {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-lg $spacing-xl;
+  background: $gradient-brand-subtle;
+  border: 1px solid rgba($color-teal, 0.12);
+  border-radius: $radius-xl;
+  text-align: left;
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.gapNumber {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.gapText {
+  color: $color-text-secondary;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---- Solution ---- */
+.solutionSection {
+  padding-top: $spacing-2xl;
+}
+
+.solutionHeader {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.solutionHeading {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.02em;
+  color: $color-text;
+}
+
+.solutionSubtitle {
+  color: $color-text-secondary;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solutionTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $color-border;
+
+    @include respond-to(mobile) {
+      left: 22px;
+    }
+  }
+}
+
+.solutionStep {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  position: relative;
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $gradient-brand;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba($color-teal, 0.25);
+
+  @include respond-to(mobile) {
+    width: 44px;
+    height: 44px;
+    font-size: 0.75rem;
+  }
+}
+
+.stepContent {
+  @include glass-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+  flex: 1;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.stepTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $color-text;
+  margin-bottom: 4px;
+}
+
+.stepDesc {
+  color: $color-text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}

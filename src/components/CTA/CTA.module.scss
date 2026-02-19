@@ -1,0 +1,145 @@
+@use '../../styles/variables' as *;
+
+.cta {
+  @include section-padding;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: $color-bg;
+}
+
+.container {
+  @include container;
+}
+
+.bgGlow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(200px);
+  opacity: 0.1;
+  pointer-events: none;
+  background: $color-teal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.02em;
+  color: $color-text;
+
+  .highlight {
+    font-family: $font-display;
+    font-style: italic;
+    background: $gradient-brand;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+  }
+}
+
+.subtitle {
+  color: $color-text-secondary;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto $spacing-xl;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-3xl;
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.btnPrimary {
+  padding: 0.9rem 2.2rem;
+  background: $gradient-brand;
+  color: $color-white;
+  border-radius: $radius-full;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  box-shadow: 0 4px 20px rgba($color-teal, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba($color-teal, 0.4);
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.btnSecondary {
+  padding: 0.9rem 2.2rem;
+  background: transparent;
+  color: $color-text;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+    background: $color-primary-muted;
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.trustRow {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-2xl;
+  flex-wrap: wrap;
+
+  @include respond-to(mobile) {
+    gap: $spacing-lg;
+  }
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.trustValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trustLabel {
+  font-size: 0.8rem;
+  color: $color-text-muted;
+}

@@ -1,0 +1,116 @@
+// Brand Colors (extracted from logo gradient: teal → navy)
+$color-teal: #4FBAB2;
+$color-teal-light: #6DD0C8;
+$color-teal-dark: #3A9E97;
+$color-navy: #2D4A78;
+$color-navy-light: #3D5F94;
+$color-navy-dark: #1E3358;
+
+// Gradient
+$gradient-brand: linear-gradient(135deg, $color-teal, $color-navy);
+$gradient-brand-horizontal: linear-gradient(90deg, $color-teal, $color-navy);
+$gradient-brand-subtle: linear-gradient(135deg, rgba($color-teal, 0.08), rgba($color-navy, 0.08));
+
+// Backgrounds (light theme)
+$color-bg: #ffffff;
+$color-bg-secondary: #f5f7fa;
+$color-bg-tertiary: #eef1f6;
+$color-bg-card: #ffffff;
+$color-bg-card-hover: #fafbfc;
+
+// Borders
+$color-border: #e2e8f0;
+$color-border-light: #edf2f7;
+
+// Primary = teal, Secondary = navy
+$color-primary: $color-teal;
+$color-primary-dark: $color-teal-dark;
+$color-primary-muted: rgba($color-teal, 0.1);
+$color-secondary: $color-navy;
+$color-secondary-muted: rgba($color-navy, 0.08);
+
+// Text (dark on light)
+$color-text: #1a2035;
+$color-text-secondary: #5a6578;
+$color-text-muted: #8994a7;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Typography
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-display: 'Playfair Display', Georgia, serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+$spacing-3xl: 6rem;
+$spacing-4xl: 8rem;
+
+// Border Radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+// Shadows (light theme)
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 16px 50px rgba(0, 0, 0, 0.12);
+$shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+$shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+
+// Container
+$container-max: 1200px;
+$container-padding: 1.5rem;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $bp-mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $bp-tablet) { @content; }
+  } @else if $breakpoint == laptop {
+    @media (max-width: $bp-laptop) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $bp-desktop) { @content; }
+  }
+}
+
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  width: 100%;
+}
+
+@mixin glass-card {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+@mixin section-padding {
+  padding: $spacing-4xl 0;
+
+  @include respond-to(tablet) {
+    padding: $spacing-3xl 0;
+  }
+
+  @include respond-to(mobile) {
+    padding: $spacing-2xl 0;
+  }
+}
