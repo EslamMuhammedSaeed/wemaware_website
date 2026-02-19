@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .features {
   @include section-padding;
@@ -32,6 +32,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 400;
+  padding: 5px;
 }
 
 /* ---- Problem ---- */
@@ -173,11 +174,11 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 28px;
-    top: 0;
-    bottom: 0;
+    top: 45px;
+    bottom: 45px;
     width: 2px;
     background: $color-border;
 
@@ -189,7 +190,7 @@
 
 .solutionStep {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: $spacing-md;
   position: relative;
 }

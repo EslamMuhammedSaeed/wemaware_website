@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .community {
   @include section-padding;
@@ -46,6 +46,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 400;
+    padding: 5px;
   }
 }
 

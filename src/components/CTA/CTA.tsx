@@ -1,14 +1,14 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import TextReveal from '../TextReveal';
-import { fadeInUp } from '../../hooks/useRevealAnimation';
-import styles from './CTA.module.scss';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import TextReveal from "../TextReveal";
+import { fadeInUp } from "../../hooks/useRevealAnimation";
+import styles from "./CTA.module.scss";
 
 export default function CTA() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const contentY = useTransform(scrollYProgress, [0, 1], [60, -30]);
@@ -37,8 +37,8 @@ export default function CTA() {
           viewport={{ once: true }}
           custom={0.2}
         >
-          Join forward-thinking lenders who are already using WemaWare to
-          close the credit gap and serve small businesses profitably.
+          Join forward-thinking lenders who are already using WemaWare to close
+          the credit gap and serve small businesses profitably.
         </motion.p>
 
         <motion.div
@@ -51,11 +51,18 @@ export default function CTA() {
         >
           <button className={styles.btnPrimary}>
             Request a Demo
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-          <button className={styles.btnSecondary}>Contact Sales</button>
+          {/* <button className={styles.btnSecondary}>Contact Sales</button> */}
         </motion.div>
 
         <motion.div
@@ -67,10 +74,10 @@ export default function CTA() {
           custom={0.4}
         >
           {[
-            { value: 'Cloud-Based', label: 'SaaS Platform' },
-            { value: 'Weeks', label: 'To Launch' },
-            { value: 'Full Lifecycle', label: 'Loan Management' },
-            { value: '24/7', label: 'Support Available' },
+            { value: "Cloud-Based", label: "SaaS Platform" },
+            { value: "Weeks", label: "To Launch" },
+            { value: "Full Lifecycle", label: "Loan Management" },
+            { value: "24/7", label: "Support Available" },
           ].map((item) => (
             <div key={item.label} className={styles.trustItem}>
               <span className={styles.trustValue}>{item.value}</span>
