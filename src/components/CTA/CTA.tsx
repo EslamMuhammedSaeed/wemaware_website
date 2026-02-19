@@ -49,7 +49,7 @@ export default function CTA() {
           viewport={{ once: true }}
           custom={0.3}
         >
-          <button className={styles.btnPrimary}>
+          <a href="#request-demo" className={styles.btnPrimary}>
             Request a Demo
             <svg
               width="16"
@@ -61,7 +61,7 @@ export default function CTA() {
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </button>
+          </a>
           {/* <button className={styles.btnSecondary}>Contact Sales</button> */}
         </motion.div>
 

@@ -5,6 +5,7 @@ import Community from './components/Community/Community';
 import Integrations from './components/Integrations/Integrations';
 import Testimonials from './components/Testimonials/Testimonials';
 import CTA from './components/CTA/CTA';
+import RequestDemo from './components/RequestDemo/RequestDemo';
 import Footer from './components/Footer/Footer';
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Integrations />
         <Testimonials />
         <CTA />
+        <RequestDemo />
       </main>
       <Footer />
     </>

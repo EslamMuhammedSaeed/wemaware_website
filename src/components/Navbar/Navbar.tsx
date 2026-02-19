@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
 
           <div className={styles.cta}>
-            <button className={styles.ctaButton}>Request Demo</button>
+            <a href="#request-demo" className={styles.ctaButton}>Request Demo</a>
           </div>
 
           <div
@@ -66,7 +66,7 @@ export default function Navbar() {
           About
         </a>
         <a
-          href="#"
+          href="#request-demo"
           className={styles.mobileCtaButton}
           onClick={() => setMobileOpen(false)}
         >

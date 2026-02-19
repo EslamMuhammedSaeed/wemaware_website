@@ -66,7 +66,7 @@ export default function Hero() {
         animate="visible"
         custom={0.6}
       >
-        <button className={styles.btnPrimary}>
+        <a href="#request-demo" className={styles.btnPrimary}>
           Request a Demo
           <svg
             width="16"
@@ -78,7 +78,7 @@ export default function Hero() {
           >
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </button>
+        </a>
         {/* <button className={styles.btnSecondary}>See How It Works</button> */}
       </motion.div>
 
