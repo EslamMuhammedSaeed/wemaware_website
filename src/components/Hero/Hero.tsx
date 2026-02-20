@@ -3,7 +3,7 @@ import { useRef } from "react";
 import TextReveal from "../TextReveal";
 import { fadeInUp, fadeIn } from "../../hooks/useRevealAnimation";
 import styles from "./Hero.module.scss";
-import mainImg from "../../assets/main_image.png";
+import mainImg from "../../assets/main_image_4.png";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);

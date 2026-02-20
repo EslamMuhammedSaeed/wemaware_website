@@ -1,57 +1,62 @@
-import { motion } from 'framer-motion';
-import TextReveal from '../TextReveal';
-import { fadeInUp, slideInLeft, slideInRight, scaleIn } from '../../hooks/useRevealAnimation';
-import { useSectionParallax } from '../../hooks/useParallax';
-import styles from './Features.module.scss';
+import { motion } from "framer-motion";
+import TextReveal from "../TextReveal";
+import {
+  fadeInUp,
+  slideInLeft,
+  slideInRight,
+  scaleIn,
+} from "../../hooks/useRevealAnimation";
+import { useSectionParallax } from "../../hooks/useParallax";
+import styles from "./Features.module.scss";
 
 const problems = [
   {
-    icon: '🔒',
-    title: 'Lack of Collateral',
-    desc: 'Many viable SMEs cannot meet traditional collateral requirements, excluding them from formal credit markets.',
+    icon: "🔒",
+    title: "Lack of Collateral",
+    desc: "Many viable SMEs cannot meet traditional collateral requirements, excluding them from formal credit markets.",
   },
   {
-    icon: '⏳',
-    title: 'Slow Approvals',
-    desc: 'Manual and fragmented underwriting processes lead to weeks-long decision cycles, frustrating borrowers and increasing costs.',
+    icon: "⏳",
+    title: "Slow Approvals",
+    desc: "Manual and fragmented underwriting processes lead to weeks-long decision cycles, frustrating borrowers and increasing costs.",
   },
   {
-    icon: '🏦',
-    title: 'Conservative Banks',
-    desc: 'Risk-averse commercial banks often avoid SME lending entirely, leaving a massive funding gap in growth markets.',
+    icon: "🏦",
+    title: "Conservative Banks",
+    desc: "Risk-averse commercial banks often avoid SME lending entirely, leaving a massive funding gap in growth markets.",
   },
   {
-    icon: '💸',
-    title: 'Expensive Short-Term Credit',
+    icon: "💸",
+    title: "Expensive Short-Term Credit",
     desc: "MFIs and fintechs fill the gap with short-term, high-interest products that don't support sustainable business growth.",
   },
 ];
 
 const solutions = [
   {
-    title: 'Origination',
-    desc: 'Digital loan applications with structured data capture and document management.',
-    step: '01',
+    title: "Origination",
+    desc: "Digital loan applications with structured data capture and document management.",
+    step: "01",
   },
   {
-    title: 'Underwriting',
-    desc: 'Configurable credit scoring, risk assessment, and approval workflows.',
-    step: '02',
+    title: "Underwriting",
+    desc: "Configurable credit scoring, risk assessment, and approval workflows.",
+    step: "02",
   },
   {
-    title: 'Disbursement & Servicing',
-    desc: 'Automated disbursement, repayment scheduling, and collections tracking.',
-    step: '03',
+    title: "Disbursement & Servicing",
+    desc: "Automated disbursement, repayment scheduling, and collections tracking.",
+    step: "03",
   },
   {
-    title: 'Monitoring & Reporting',
-    desc: 'Real-time portfolio dashboards, borrower analytics, and regulatory reporting.',
-    step: '04',
+    title: "Monitoring & Reporting",
+    desc: "Real-time portfolio dashboards, borrower analytics, and regulatory reporting.",
+    step: "04",
   },
   {
-    title: 'Configuration',
-    desc: 'Flexible product setup — loan types, interest models, collateral rules, and fee structures.',
-    step: '05',
+    title: "Configuration",
+    desc: "Flexible product setup — loan types, interest models, collateral rules, and fee structures.",
+    step: "05",
   },
 ];
 
@@ -62,7 +67,7 @@ export default function Features() {
     <section id="problem" className={styles.features} ref={ref}>
       <motion.div className={styles.container} style={{ opacity, y }}>
         {/* The Problem */}
-        <div className={styles.problemSection}>
+        {/* <div className={styles.problemSection}>
           <div className={styles.problemHeader}>
             <motion.div
               className={styles.sectionLabel}
@@ -125,7 +130,7 @@ export default function Features() {
               credit gap for SMEs in developing economies — and lenders lack the tools to close it profitably.
             </span>
           </motion.div>
-        </div>
+        </div> */}
 
         {/* The Solution */}
         <div className={styles.solutionSection} id="solution">
@@ -156,8 +161,8 @@ export default function Features() {
               viewport={{ once: true }}
               custom={0.2}
             >
-              WemaWare provides lenders with a single, cloud-based platform to manage the
-              entire loan lifecycle — from application to maturity.
+              WemaWare provides lenders with a single, cloud-based platform to
+              manage the entire loan lifecycle — from application to maturity.
             </motion.p>
           </div>
 

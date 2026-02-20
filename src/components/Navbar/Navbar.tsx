@@ -27,15 +27,17 @@ export default function Navbar() {
           </a>
 
           <div className={styles.navLinks}>
-            <a href="#problem">The Problem</a>
-            <a href="#solution">Solution</a>
+            {/* <a href="#problem">The Problem</a> */}
+            <a href="#problem">The Solution</a>
             <a href="#features">Features</a>
             <a href="#who">Who It's For</a>
             <a href="#about">About</a>
           </div>
 
           <div className={styles.cta}>
-            <a href="#request-demo" className={styles.ctaButton}>Request Demo</a>
+            <a href="#request-demo" className={styles.ctaButton}>
+              Request Demo
+            </a>
           </div>
 
           <div
@@ -50,11 +52,11 @@ export default function Navbar() {
       </motion.nav>
 
       <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ""}`}>
-        <a href="#problem" onClick={() => setMobileOpen(false)}>
+        {/* <a href="#problem" onClick={() => setMobileOpen(false)}>
           The Problem
-        </a>
+        </a> */}
         <a href="#solution" onClick={() => setMobileOpen(false)}>
-          Solution
+          The Solution
         </a>
         <a href="#features" onClick={() => setMobileOpen(false)}>
           Features
