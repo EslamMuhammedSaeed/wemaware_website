@@ -4,33 +4,33 @@ import {
   fadeInUp,
   slideInLeft,
   slideInRight,
-  scaleIn,
+  // scaleIn,
 } from "../../hooks/useRevealAnimation";
 import { useSectionParallax } from "../../hooks/useParallax";
 import styles from "./Features.module.scss";
 
-const problems = [
-  {
-    icon: "🔒",
-    title: "Lack of Collateral",
-    desc: "Many viable SMEs cannot meet traditional collateral requirements, excluding them from formal credit markets.",
-  },
-  {
-    icon: "⏳",
-    title: "Slow Approvals",
-    desc: "Manual and fragmented underwriting processes lead to weeks-long decision cycles, frustrating borrowers and increasing costs.",
-  },
-  {
-    icon: "🏦",
-    title: "Conservative Banks",
-    desc: "Risk-averse commercial banks often avoid SME lending entirely, leaving a massive funding gap in growth markets.",
-  },
-  {
-    icon: "💸",
-    title: "Expensive Short-Term Credit",
-    desc: "MFIs and fintechs fill the gap with short-term, high-interest products that don't support sustainable business growth.",
-  },
-];
+// const problems = [
+//   {
+//     icon: "🔒",
+//     title: "Lack of Collateral",
+//     desc: "Many viable SMEs cannot meet traditional collateral requirements, excluding them from formal credit markets.",
+//   },
+//   {
+//     icon: "⏳",
+//     title: "Slow Approvals",
+//     desc: "Manual and fragmented underwriting processes lead to weeks-long decision cycles, frustrating borrowers and increasing costs.",
+//   },
+//   {
+//     icon: "🏦",
+//     title: "Conservative Banks",
+//     desc: "Risk-averse commercial banks often avoid SME lending entirely, leaving a massive funding gap in growth markets.",
+//   },
+//   {
+//     icon: "💸",
+//     title: "Expensive Short-Term Credit",
+//     desc: "MFIs and fintechs fill the gap with short-term, high-interest products that don't support sustainable business growth.",
+//   },
+// ];
 
 const solutions = [
   {
