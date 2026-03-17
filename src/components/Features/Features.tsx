@@ -142,7 +142,7 @@ export default function Features() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              The Solution
+              Solution
             </motion.div>
             <h2 className={styles.solutionHeading}>
               <TextReveal text="End-to-End Lending," />
@@ -162,7 +162,7 @@ export default function Features() {
               custom={0.2}
             >
               WemaWare provides lenders with a single, cloud-based platform to
-              manage the entire loan lifecycle — from application to maturity.
+              manage the entire loan lifecycle — from origination to settlement.
             </motion.p>
           </div>
 

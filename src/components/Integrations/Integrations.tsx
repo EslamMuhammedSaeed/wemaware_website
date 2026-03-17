@@ -41,7 +41,7 @@ export default function Integrations() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Who It's For
+            Ideal For
           </motion.div>
           <h2 className={styles.heading}>
             <TextReveal text="Built for Lenders Who Serve" />

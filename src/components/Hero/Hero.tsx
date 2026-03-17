@@ -3,7 +3,8 @@ import { useRef } from "react";
 import TextReveal from "../TextReveal";
 import { fadeInUp, fadeIn } from "../../hooks/useRevealAnimation";
 import styles from "./Hero.module.scss";
-import mainImg from "../../assets/main_image_4.png";
+import mainImg from "../../assets/main_image_5.png";
+import logo from "../../assets/logo.png";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -27,14 +28,15 @@ export default function Hero() {
       />
 
       <motion.div
-        className={styles.badge}
+        className={styles.heroLogo}
         variants={fadeIn}
         initial="hidden"
         animate="visible"
         custom={0.2}
       >
-        <span className={styles.dot} />
-        SME Lending Platform
+        {/* <span className={styles.dot} />
+        SME Lending Platform */}
+        <img src={logo} alt="WemaWare" />
       </motion.div>
 
       <h1 className={styles.heading}>

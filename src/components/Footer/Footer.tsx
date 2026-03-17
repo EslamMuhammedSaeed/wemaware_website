@@ -4,10 +4,10 @@ import logoImg from "../../assets/logo.png";
 import styles from "./Footer.module.scss";
 
 const navLinks = [
-  { label: "The Problem", href: "#problem" },
+  // { label: "The Problem", href: "#problem" },
   { label: "Solution", href: "#solution" },
   { label: "Features", href: "#features" },
-  { label: "Who It's For", href: "#who" },
+  { label: "Ideal For", href: "#who" },
   { label: "About", href: "#about" },
   { label: "Request Demo", href: "#request-demo" },
 ];
@@ -42,7 +42,7 @@ export default function Footer() {
           </nav>
 
           <div className={styles.socials}>
-            <a href="#" aria-label="Twitter">
+            {/* <a href="#" aria-label="Twitter">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -61,7 +61,7 @@ export default function Footer() {
               >
                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
               </svg>
-            </a>
+            </a> */}
           </div>
         </motion.div>
 

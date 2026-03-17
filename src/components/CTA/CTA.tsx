@@ -77,7 +77,7 @@ export default function CTA() {
             { value: "Cloud-Based", label: "SaaS Platform" },
             { value: "Weeks", label: "To Launch" },
             { value: "Full Lifecycle", label: "Loan Management" },
-            { value: "24/7", label: "Support Available" },
+            // { value: "24/7", label: "Support Available" },
           ].map((item) => (
             <div key={item.label} className={styles.trustItem}>
               <span className={styles.trustValue}>{item.value}</span>

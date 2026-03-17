@@ -1,26 +1,26 @@
 import { motion } from 'framer-motion';
 import TextReveal from '../TextReveal';
-import { fadeInUp, scaleIn } from '../../hooks/useRevealAnimation';
+import { fadeInUp } from '../../hooks/useRevealAnimation';
 import { useSectionParallax } from '../../hooks/useParallax';
 import styles from './Testimonials.module.scss';
 
-const values = [
-  {
-    icon: '🎯',
-    title: 'Mission',
-    text: 'To empower local lenders in growth markets to profitably and efficiently provide growth capital to small businesses.',
-  },
-  {
-    icon: '🌎',
-    title: 'Vision',
-    text: 'A world where every viable small business has access to the long-term capital it needs to grow, create jobs, and transform communities.',
-  },
-  {
-    icon: '💎',
-    title: 'Values',
-    text: 'Impact-driven innovation, radical transparency, deep partnership with our clients, and relentless focus on borrower outcomes.',
-  },
-];
+// const values = [
+//   {
+//     icon: '🎯',
+//     title: 'Mission',
+//     text: 'To empower local lenders in growth markets to profitably and efficiently provide growth capital to small businesses.',
+//   },
+//   {
+//     icon: '🌎',
+//     title: 'Vision',
+//     text: 'A world where every viable small business has access to the long-term capital it needs to grow, create jobs, and transform communities.',
+//   },
+//   {
+//     icon: '💎',
+//     title: 'Values',
+//     text: 'Impact-driven innovation, radical transparency, deep partnership with our clients, and relentless focus on borrower outcomes.',
+//   },
+// ];
 
 export default function Testimonials() {
   const { ref, opacity, y } = useSectionParallax();
@@ -74,7 +74,7 @@ export default function Testimonials() {
             </p>
           </motion.div>
 
-          <div className={styles.valuesGrid}>
+          {/* <div className={styles.valuesGrid}>
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
@@ -90,7 +90,7 @@ export default function Testimonials() {
                 <p className={styles.valueText}>{v.text}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </section>

@@ -28,9 +28,9 @@ export default function Navbar() {
 
           <div className={styles.navLinks}>
             {/* <a href="#problem">The Problem</a> */}
-            <a href="#problem">The Solution</a>
+            <a href="#problem">Solution</a>
             <a href="#features">Features</a>
-            <a href="#who">Who It's For</a>
+            <a href="#who">Ideal For</a>
             <a href="#about">About</a>
           </div>
 
@@ -56,13 +56,13 @@ export default function Navbar() {
           The Problem
         </a> */}
         <a href="#solution" onClick={() => setMobileOpen(false)}>
-          The Solution
+          Solution
         </a>
         <a href="#features" onClick={() => setMobileOpen(false)}>
           Features
         </a>
         <a href="#who" onClick={() => setMobileOpen(false)}>
-          Who It's For
+          Ideal For
         </a>
         <a href="#about" onClick={() => setMobileOpen(false)}>
           About
